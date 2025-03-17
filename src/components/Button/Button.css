@@ -1,0 +1,18 @@
+
+.button {
+    padding: 10px;
+    font-size: 35px;
+    font-family: "inter" ,sans-serif;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(29, 90, 67, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: rgba(29, 90, 67, 0.6);
+  }
+  
+  .button:active {
+    background-color: rgba(29, 90, 67, 1);
+  }

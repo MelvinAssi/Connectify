@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One:wght@&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+:root {
+    --color1: #216249ff;
+    --color2: #daca3bff;
+    --color3: #000000;
+    --color4: #d9d9d9;
+    --color5: #ffffff;
+    --color6: #1d5a43;
+    --color7: #20835d;    
+}
+
+.footerContainer{
+    background-color: var(--color1);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerContainer>h1{
+    font-family: 'inter', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--color5);
+
+}
