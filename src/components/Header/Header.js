@@ -24,13 +24,13 @@ export default function Header(){
                 </li>
                 <li>
                     <Link 
-                        to="/auth"  
-                        className={`base-link ${location.pathname === '/auth' ? 'active-link' : ''}`}>
+                        to="/login"  
+                        className={`base-link ${location.pathname === '/login' ? 'active-link' : ''}`}>
                             Connexion
                     </Link>
                 </li>
                 <li>
-                    <Button text="Inscription" onClick={() => handleClick("/auth")} />
+                    <Button text="Inscription" onClick={() => handleClick("/signup")} />
                 </li>
             </ul>
          </div>

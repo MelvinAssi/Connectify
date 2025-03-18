@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One:wght@&display=swap');
+
+:root {
+    --color1: #216249ff;
+    --color2: #daca3bff;
+    --color3: #000000;
+    --color4: #d9d9d9;
+    --color5: #ffffff;
+    --color6: #1d5a43;
+    --color7: #20835d;
+}
+
+body, main {
+    margin: 0;
+    padding: 0;
+}
+
+.login_main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.login_image{
+    height: 100vh;
+    width: 45%;
+    background-image: url('../../assets/images/fd_connexion.jpg'); 
+    background-size: cover;
+}
+.login-form-container{
+    height: 100vh;
+    width: 55%;
+    background-color: var(--color7);
+    justify-items: center;
+    align-content: center;
+}
+.login-form-container>h1{
+    color: var(--color2);
+    font-family: "Gravitas+One";
+    font-size: 44px;
+    padding: 40px;
+}
+.login-form-container>p{
+    color: var(--color5);
+    font-family: "Inter";
+    font-size: 25px;
+}
+#login-form{
+    background-color: var(--color6);
+    width: 60%;
+    height: 40%;
+    border-radius: 20px;
+    padding: 40px;
+}
+.login-button{
+    background-color: var(--color2);
+    border-radius: 20px;
+
+}
+form button.login-button {
+    background-color: var(--color2);
+    color: var(--color5);
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 30px;
+    font-family: "inter";
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button.login-button:hover {
+    background-color: var(--color2);
+    transform: scale(1.05);
+}
+.signup-link{
+    color: var(--color5);
+}

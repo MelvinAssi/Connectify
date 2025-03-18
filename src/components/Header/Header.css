@@ -18,6 +18,8 @@
 }
 
 .headerContainer{
+    position: absolute;
+    width: 100%;
     height: 180px;
     display: flex;
     flex-direction: row;
@@ -37,7 +39,7 @@ ul{
     flex-direction: row;
     align-items: center;
     font-size: 35px;
-    color: var(--color3);
+    color: var(--color5);
     cursor: pointer;
     font-family: "inter" ,sans-serif;
     
@@ -47,7 +49,7 @@ ul>li{
 }
 .base-link {
     text-decoration: none;
-    color: var(--color3);
+    color: var(--color5);
   }
   
 .active-link {
