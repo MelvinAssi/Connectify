@@ -6,6 +6,7 @@ function ContactPage(){
     return (
         <>       
             <Header></Header>
+            <p>ContactPage</p>
             <Footer></Footer>        
         </>
     );

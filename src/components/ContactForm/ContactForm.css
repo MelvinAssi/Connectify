@@ -1,0 +1,112 @@
+
+:root {
+    --color1: #216249ff;
+    --color2: rgb(218,202,59);
+    --color3: #000000;
+    --color4: #d9d9d9;
+    --color5: #ffffff;
+    --color6: #1d5a43;
+    --color7: #20835d;
+}
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One:wght@&display=swap');
+
+.contact-form-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form-container>h1 {
+    justify-self: center;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--color2);
+    font-family: "Gravitas+One";
+}
+
+
+#contact-form {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color6);
+    width: 70%;
+    height: 60%;
+    border-radius: 20px;
+
+}
+
+
+form div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form label {
+    align-self: flex-start; 
+    margin-bottom: 10px;
+    color: var(--color5);
+    font-family: "inter";
+    font-weight: 400;
+    font-size: 25px;
+}
+
+
+form input, form textarea {
+    width: 100%; 
+    padding: 10px;
+    background-color: var(--color4);
+    color: var(--text-color1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: inset 4px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+form input::placeholder, form textarea::placeholder {
+    font-family: "inter";
+    font-size: 20px;
+    color: rbga(0,0,0,0.21);
+    font-style: italic;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: var(--color4);
+    outline: none;
+}
+
+
+
+form textarea {
+    resize: none; 
+}
+
+
+form button.send-button {
+    background-color: var(--color2);
+    color: var(--color5);
+    padding: 12px 24px;
+    font-size: 30px;
+    font-family: "inter";
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button.send-button:hover {
+    background-color: var(--color2);
+    transform: scale(1.05);
+}
+
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color:var(--color5);
+    outline: none;
+}
