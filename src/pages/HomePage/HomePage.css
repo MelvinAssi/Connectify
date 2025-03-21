@@ -107,15 +107,7 @@ section{
     background-color: rgba(0,0,0,0.35);
 }
 
-#section2 > .section_image {
-    background-image: url('../../assets/images/fd_actualite.jpg'); 
-}
-#section3 > .section_image {
-    background-image: url('../../assets/images/fd_qsn.jpg'); 
-}
-#section4 > .section_image {
-    background-image: url('../../assets/images/fd_contact.jpg'); 
-}
+
 .section_color{
     width: 50%;
 }

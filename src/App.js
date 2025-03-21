@@ -10,15 +10,15 @@ function App() {
   return (
     
     <div className="App">
-      <Router>
-      <Routes>
+      
+        <Routes Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/signup" element={<SignUpPage />} />*
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
-      </Router>
+      
     </div>
   );
 }

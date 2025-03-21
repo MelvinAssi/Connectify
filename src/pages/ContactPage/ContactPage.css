@@ -1,0 +1,26 @@
+:root {
+    --color1: #216249ff;
+    --color2: rgb(218,202,59);
+    --color3: #000000;
+    --color4: #d9d9d9;
+    --color5: #ffffff;
+    --color6: #1d5a43;
+    --color7: #20835d;
+}
+.contact_main {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  .contact_image {
+    width: 45%;
+    background-size: cover;
+    background-position: center; 
+  }
+  
+  .contact_backgroundColor {
+    background-color: var(--color7);
+    width: 55%;
+    height: 100vh;
+  }

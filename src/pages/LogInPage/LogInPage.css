@@ -54,12 +54,61 @@ body, main {
     border-radius: 20px;
     padding: 40px;
 }
+
+
+#login-form div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#login-form label {
+    align-self: flex-start; 
+    margin-bottom: 10px;
+    color: var(--color5);
+    font-family: "inter";
+    font-weight: 400;
+    font-size: 25px;
+}
+
+
+#login-form input, #login-form textarea {
+    width: 100%; 
+    padding: 10px;
+    background-color: var(--color4);
+    color: var(--text-color1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: inset 4px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+#login-form input::placeholder, #login-form textarea::placeholder {
+    font-family: "inter";
+    font-size: 20px;
+    color: rbga(0,0,0,0.21);
+    font-style: italic;
+}
+
+#login-form input:focus, #login-form select:focus, #login-form textarea:focus {
+    border-color: var(--color4);
+    outline: none;
+}
+
+
+
+
+
+
 .login-button{
     background-color: var(--color2);
     border-radius: 20px;
 
 }
-form button.login-button {
+#login-form button.login-button {
     background-color: var(--color2);
     color: var(--color5);
     margin-top: 20px;
@@ -72,7 +121,7 @@ form button.login-button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-form button.login-button:hover {
+#login-form button.login-button:hover {
     background-color: var(--color2);
     transform: scale(1.05);
 }
