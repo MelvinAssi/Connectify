@@ -1,0 +1,36 @@
+:root {
+    --color1: #216249ff;
+    --color2: rgb(218,202,59);
+    --color3: #000000;
+    --color4: #d9d9d9;
+    --color5: #ffffff;
+    --color6: #1d5a43;
+    --color7: #20835d;
+}
+
+
+.music_player{
+    display: flex;
+    width: 1080px;         
+    height: 300px; 
+
+}
+
+
+
+
+
+.music_img {
+    width: 300px;         
+    height: 300px;     
+    background-size: cover;  
+    background-position: center;
+}
+.music_info{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,5 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from "./components/Header/Header.js";
+import Footer from "./components/Footer/Footer.js";
 import HomePage from "./pages/HomePage/HomePage.js";
 import SignUpPage from './pages/SignUpPage/SignUpPage.js';
 import LoginPage from './pages/LogInPage/LogInPage.js';
@@ -10,7 +12,7 @@ function App() {
   return (
     
     <div className="App">
-      
+        <Header/>
         <Routes Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignUpPage />} />
@@ -18,7 +20,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
-      
+        <Footer />
     </div>
   );
 }

@@ -1,9 +1,7 @@
-import Header from "../../components/Header/Header.js";
-import Footer from "../../components/Footer/Footer.js";
 import { Link, useNavigate } from "react-router-dom";
-import "./LogInPage.css"
 import React, { useContext, useRef } from "react";
 import { UserContext } from "../../contexts/userContext.js";
+import "./LogInPage.css";
 
 function LoginPage(){
 
@@ -37,8 +35,7 @@ function LoginPage(){
 
     
     return (
-        <>       
-            <Header></Header>
+        <>
             <main className="login_main">
                 <div className="login_image"></div>
                 <div className="login-form-container">
@@ -74,9 +71,7 @@ function LoginPage(){
                         <p>Pas de compte ? <Link to="/signup" className="signup-link">Inscrivez-vous</Link></p>
                     </div>
 
-            </main>
-            
-            <Footer></Footer>        
+            </main>    
         </>
     );
 }

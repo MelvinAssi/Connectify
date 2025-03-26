@@ -26,54 +26,87 @@ section{
     font-size: 12em;
     font-weight: 400;
     font-family: "Chicle";
-    color: rgba(218,202,59,0.73) ;
+    color: transparent; 
+    -webkit-text-stroke: px rgba(218,202,59,1);
+    
 }
 #section1{
-    background-color: rgba(218,202,59,0.7);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(29, 90, 67,0.8);
+    background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden; 
 }
+
 #section1>h1{
-    
+    max-height: 200px;
     font-family: "Gravitas+One";
     font-weight: 400;
-    font-size: 124px;
-    color: var(--color7);
-    padding-bottom: 30px;
+    font-size: 100px;
+    color: var(--color5);
+    font-family: "Gravitas+One";
+    line-height: 1.1;
 }
+
 #section1>p{
+    max-width: 1000px;
     font-family: "inter";
     font-weight: 700;
     font-size: 30px;
     color: var(--color5);
 }
-#section2>.section_color>h1{
-    
-    font-family: "Gravitas+One";
-    font-weight: 400;
-    font-size: 65px;
-    color: var(--color2);
-    padding-bottom: 30px;
+#section3{    
+    transition: ease 0.5s;
+    .section_image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    p{
+        font-weight: 400;
+        font-size: 30px;
+        color: rgba(0, 0, 0,0);
+        width: 90%;
+        align-self: center;  
+        transition: ease 0.5s;
+
+    }
 }
-#section2>.section_color>p{
-    font-family: "inter";
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--color5);
-    width: 90%;
-    align-self: center;  
+#section3 :hover{
+    background-color: rgba(0, 0, 0,0.3);
+    background-blend-mode: overlay;
+    p{
+        color: var(--color5);
+        background-color: rgba(0, 0, 0,0);
+    }
 }
 
-#section3>.section_color>h1{    
+
+#section4{
+    background-color: var(--color6);
+    h1{    
+        font-family: "Gravitas+One";
+        font-weight: 400;
+        font-size: 65px;
+        color: var(--color2);
+        padding-bottom: 30px;
+    }
+}
+
+#section2>.section_color>h1{    
     font-family: "Gravitas+One";
     font-weight: 400;
     font-size: 65px;
     color: var(--color2);
     padding-bottom: 30px;
 }
-#section3>.section_color>p{    
+#section2>.section_color>p{    
     font-family: "inter";
     font-weight: 700;
     font-size: 20px;
@@ -90,22 +123,57 @@ section{
 
 
 
-#section2,#section3,#section4{
+#section2,#section3,#section4,#section5{
     display: flex;
     flex-direction: row;
 }
 #section2 > .section_color {
     background-color: var(--color7);
 }
-#section3 > .section_color {
-    background-color: var(--color6);
-}
 #section4 > .section_color {
-    background-color: var(--color7);
+    background-color: var(--color2);
 }
+
 #section5{
-    background-color: rgba(0,0,0,0.35);
+    background-color: var(--color7);
+
+    p{
+        font-family: "inter";
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--color5);
+        width: 70%;
+        align-self: center;  
+    }
+    h1{    
+        font-family: "Gravitas+One";
+        font-weight: 400;
+        font-size: 65px;
+        color: var(--color2);
+        padding-bottom: 30px;
+    }
+    button{
+        background-color: var(--color2);
+        color: var(--color5);
+        font-size: 15px;
+        font-family: "inter";
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        padding: 8px 50px;
+        margin-top: 30px;  
+        transition:  transform 0.2s ease; 
+    }
+    button:hover {
+        transform: scale(1.05); 
+    }
 }
+#section5 > .section_color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 .section_color{
@@ -114,44 +182,4 @@ section{
 .section_image{
     background-size: cover;
     width: 50%;
-}
-#section5{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.newsletter_container{
-    height: 30%;
-    width: 60%;
-    background-color: rgba(0,0,0,0.74);
-    border-radius: 20px;
-    padding: 25px;
-}
-.newsletter_container>h1{
-    color: var(--color2);
-    font-size: 65px;
-    font-weight: 400;
-    font-family: "Gravitas+One";
-    padding: 10px;
-}
-.newsletter_container>p{
-    color: var(--color5);
-    font-size: 15px;
-    font-weight: 400;
-    font-family: "Inter";
-    padding: 20px;
-}
-.newsletter_button{
-    background-color: var(--color1);
-    color: var(--color5);
-    width: 30%;
-    padding: 12px 24px;
-    font-size: 30px;
-    font-family: "inter";
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
 }

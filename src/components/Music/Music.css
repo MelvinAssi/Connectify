@@ -1,0 +1,19 @@
+.music_container {
+    padding: 20px;
+    justify-items: center;
+  }
+
+  
+  .music_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+    min-width: 300px; 
+    padding: 50px;
+  }
+  
+  .music_item {
+    overflow: hidden; 
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  }
