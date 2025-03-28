@@ -1,4 +1,4 @@
-import React,{useState,useContext} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import "./Gallery.css";
 import { UserContext } from "../../contexts/userContext";
 import ButtonAdd from "../ButtonAdd/ButtonAdd";
@@ -8,12 +8,29 @@ import ButtonAdd from "../ButtonAdd/ButtonAdd";
     const [photos, setPhotos] = useState([]);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
     const fileType =".png, .jpg" ; 
+
+    useEffect(() => {
+      const storedPhotos = JSON.parse(localStorage.getItem('photos'));
+      if (storedPhotos) {
+        setPhotos(storedPhotos);
+      }
+    }, []);
+
+
     const handleAddPhoto = (e) => {
       console.log("photos")
       const file = e.target.files[0];
       if (file && file.type.startsWith("image/")) {
-        const newPhoto = URL.createObjectURL(file); 
-        setPhotos([...photos, newPhoto]); 
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64Image = reader.result;
+          setPhotos(prevPhotos => {
+            const updatedPhotos = [...prevPhotos, base64Image];
+            localStorage.setItem(currentUser.uid+'photos', JSON.stringify(updatedPhotos)); 
+            return updatedPhotos;
+          });
+        };
+        reader.readAsDataURL(file);
       }else{
         alert("Veuillez sél ectionner un fichier image valide !");
       }

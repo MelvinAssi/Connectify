@@ -25,7 +25,6 @@ footer{
 }
 
 .footerContainer{
-    height: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,5 +45,23 @@ footer>p{
     font-size: 20px;
     font-weight: 400;    
     color: var(--color5);
+
+}
+
+
+@media (max-width: 768px) {
+    .footerContainer{
+        flex-direction: column;
+
+    }
+
+    footer {
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
 
 }

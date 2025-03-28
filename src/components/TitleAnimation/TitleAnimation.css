@@ -1,22 +1,27 @@
 .text-container {
-    display: flex;
-  }
-  
-  .letter {
-    display: inline-block;
-    color: transparent; 
-    -webkit-text-stroke: 2px rgba(218,202,59,1); 
-    animation: fillText 7.5s  infinite ;
-  }
-  
-  @keyframes fillText {
-    0% {
-        color: rgba(218,202,59,1); 
-        -webkit-text-stroke: 2px rgba(218,202,59,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20vw; 
+}
 
-    }
-    100% {
-        color: transparent; 
-        -webkit-text-stroke: 2px rgba(218,202,59,1);
-    }
+.letter {
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(218, 202, 59, 1);
+  animation: fillText 7.5s infinite;
+}
+
+@keyframes fillText {
+  0% {
+    color: rgba(218, 202, 59, 1);
+    -webkit-text-stroke: 2px rgba(218, 202, 59, 1);
   }
+  100% {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(218, 202, 59, 1);
+  }
+}
+
+

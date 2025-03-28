@@ -1,11 +1,9 @@
 import React,{useEffect,useState} from "react";
 import { useNavigate } from 'react-router-dom'
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer.js";
-import ContactForm from "../../components/ContactForm/ContactForm.js";
 import "./HomePage.css";
 
 
-import fdActualite from "../../assets/images/fd_actualite.jpg";
 import fdActualite1 from "../../assets/images/fd_actualite1.png";
 import fdActualite2 from "../../assets/images/fd_actualite2.png";
 import fdQsn from "../../assets/images/fd_qsn.jpg";
@@ -14,6 +12,7 @@ import WelcomeImage from "../../assets/images/Pexels_Photo_by_Pixabay.png";
 
 
 import TitleAnimation from "../../components/TitleAnimation/TitleAnimation.js";
+import Carousel from "../../components/Carousel/Carousel.js";
 
 function HomePage() {
 
@@ -85,7 +84,8 @@ function HomePage() {
 
         {/* Section 4 */}
         <section id="section4">
-          <h1>Actualité</h1>
+          <h1>Actualités</h1>
+          <Carousel/>
         </section>
 
         {/* Section 5 */}

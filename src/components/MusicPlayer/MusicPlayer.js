@@ -5,7 +5,7 @@ import "./MusicPlayer.css"
 
 const MusicPlayer =({music,index})=>{
 
-
+    console.log('Audio source:', music.src);
     return(
         <> 
         <div className="music_player">
