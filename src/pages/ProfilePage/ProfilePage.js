@@ -4,6 +4,7 @@ import { UserContext } from "../../contexts/userContext.js";
 import React, { useContext, useState } from "react";
 import "./ProfilePage.css";
 import bannerProfil from "../../assets/images/banner_profil2.png";
+import avatarProfil from "../../assets/images/hexatar_230720ry32sx.png";
 import Gallery from "../../components/Gallery/Gallery.js";
 import Music from "../../components/Music/Music.js";
 import Video from "../../components/Video/Video.js";
@@ -14,6 +15,7 @@ import { ReactComponent as WallIcon } from "../../assets/icons/person.svg";
 import { ReactComponent as PhotoIcon } from "../../assets/icons/image.svg";
 import { ReactComponent as PlayCircleIcon } from "../../assets/icons/movie.svg";
 import { ReactComponent as MusicNoteIcon } from "../../assets/icons/music_note2.svg";
+import { ReactComponent as ArrowUpIcon } from "../../assets/icons/keyboard_arrow_up.svg";
 
 function ProfilePage() {
     const { currentUser, loadingData } = useContext(UserContext);
@@ -66,7 +68,7 @@ function ProfilePage() {
             <div style={{ height: "125px", backgroundColor: "#20835d" }}></div>
             <div className="banner_image" style={{ backgroundImage: `url(${bannerProfil})` }}>
                 <div className="banner">
-                    <div className="avatar"></div>
+                    <div className="avatar" style={{ backgroundImage: `url(${avatarProfil})` }}></div>
                     <div className="banner_information">
                         <div>
                             {currentUser.firstname} {currentUser.name}
@@ -130,7 +132,7 @@ function ProfilePage() {
                     </div>
                 </div>
             </div>
-            <button onClick={scrollToTop} className="scrollToTopBtn">↑</button>
+            <button onClick={scrollToTop} className="scrollToTopBtn"><ArrowUpIcon/></button>
         </main>
     );
 }

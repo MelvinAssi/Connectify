@@ -43,9 +43,13 @@ ul{
     color: var(--color5);
     cursor: pointer;
     font-family: "inter" ,sans-serif;
-    
+    .button{
+        font-size: 3vw;
+        color: var(--color5);
+    }
 }
 ul>li{
+    
     padding: 1.8vw;
 }
 .base-link {
@@ -75,7 +79,9 @@ ul>li{
 @media (max-width: 768px) {
     ul{
         font-size: 6vw;
-        
+        .button{
+            font-size: 6vw;
+        }
     }
 
     .headerContainer{

@@ -15,16 +15,14 @@ function Music(){
     useEffect(() => {
         const fetchUserMusics = async () => {
             if (currentUser) {
-                const musicsData = await getUserData(currentUser.uid, "music");
+                const musicsData = await getUserData(currentUser.uid, "musics");
                 if (musicsData && Array.isArray(musicsData)) {
                     musicsData.map(music => {
                         addManualFile(music.name)
-
                     });
                 }
             }
         };
-
         fetchUserMusics();
     }, [currentUser, getUserData]);
 
@@ -42,7 +40,7 @@ function Music(){
         };
     
         setMusics(prevMusics => [...prevMusics, newMusic]);
-        setUserData(currentUser.uid, "music", [...musics, { name: fileName, path: file.name }]);
+        setUserData(currentUser.uid, "musics", [...musics, { name: fileName, path: file.name }]);
     };
 
     const handleAddMusic = (e) => {
@@ -57,7 +55,7 @@ function Music(){
             const userMusic = {
                 name: file.name
             };
-            setUserData(currentUser.uid, "music", userMusic);
+            setUserData(currentUser.uid, "musics", userMusic);
             setMusics((prevMusics) => [...prevMusics, newMusic]);
         } else {
             alert("Veuillez sélectionner un fichier audio valide !");

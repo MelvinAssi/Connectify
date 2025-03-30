@@ -1,25 +1,54 @@
 import React from "react";
-import "./Message.css"
+import styled from "styled-components"; // Importez styled-components
 
+// Définir les composants stylisés
+const MessageContainer = styled.div`
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+`;
 
-const Message=({ msg, date, file})=>{
-    const currentDate = new Date();
-    const hours = currentDate.getHours();
-    const minutes = currentDate.getMinutes();
-    const timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+const MessageText = styled.div`
+    font-size: 16px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify; /* Texte justifié */
+`;
 
-    return(
-        <>
-        <div className="message_container">
-        {file && file.type.startsWith("image/") && (
-                <div className="message_file">
-                    <img src={URL.createObjectURL(file)} alt="file" className="message_image" />
-                </div>
+const MessageDate = styled.div`
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 12px;
+    color: gray;
+`;
+
+const MessageFile = styled.div`
+    margin-bottom: 10px;
+`;
+
+const MessageImage = styled.img`
+    max-width: 100%;
+    height: auto;
+`;
+
+// Composant Message
+const Message = ({ msg, date, file }) => {
+    return (
+        <MessageContainer>
+            {file && file.type.startsWith("image/") && (
+                <MessageFile>
+                    <MessageImage src={URL.createObjectURL(file)} alt="file" />
+                </MessageFile>
             )}
-            <div className="message">{msg}</div>
-            <div className="message_date">{date}</div>
-        </div>
-        </>
+            <MessageText>{msg}</MessageText>
+            <MessageDate>{date}</MessageDate>
+        </MessageContainer>
     );
-}
+};
+
 export default Message;

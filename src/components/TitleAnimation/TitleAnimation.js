@@ -1,11 +1,38 @@
 import React, { useState, useEffect } from "react";
-import "./TitleAnimation.css";
+import styled from "styled-components";
+
+// Définir les composants stylisés
+const TextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20vw;
+`;
+
+const Letter = styled.span`
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(218, 202, 59, 1);
+  animation: fillText 7.5s infinite;
+
+  @keyframes fillText {
+    0% {
+      color: rgba(218, 202, 59, 1);
+      -webkit-text-stroke: 2px rgba(218, 202, 59, 1);
+    }
+    100% {
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(218, 202, 59, 1);
+    }
+  }
+`;
 
 const TitleAnimation = ({ text }) => {
   const [letters, setLetters] = useState([]);
 
   useEffect(() => {
-    const textArray = text.split('');
+    const textArray = text.split("");
     setLetters(textArray);
   }, [text]);
 
@@ -19,19 +46,18 @@ const TitleAnimation = ({ text }) => {
   };
 
   return (
-    <div className="text-container">
+    <TextContainer>
       {letters.map((letter, index) => (
-        <span
+        <Letter
           key={index}
-          className="letter"
           style={{
             animationDelay: getAnimationDelay(index),
           }}
         >
           {letter}
-        </span>
+        </Letter>
       ))}
-    </div>
+    </TextContainer>
   );
 };
 

@@ -1,68 +1,75 @@
 .gallery_container {
-    padding: 20px;
-    justify-items: center;
-  }
+  padding: 20px;
+  justify-items: center;
+}
 
-  
-  .picture_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 64px;
-    min-width: 300px; 
-    padding: 50px;
-  }
-  
-  .picture_item {
-    width: 380px; 
-    height: 380px; 
-    overflow: hidden; 
-    border-radius: 20px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-  }
-  .picture_item img {
-    width: 100%;
-    height: auto;
-    
-    object-fit: cover;
-    display: block;
-  }
+.picture_grid {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); /* Auto-fill avec une taille minimale de 250px */
+  gap: 20px;
+  padding: 20px;
+}
 
+.picture_item {
+  justify-self: center;
+  width: 380px; /* Utilise toute la largeur de la colonne */
+  height: 380px; /* Maintient la hauteur constante */
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
 
+.picture_item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 
 .photo_modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 .modal_content {
-    
-    position: relative;
+  position: relative;
 }
 
 .modal_image {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
 }
 
 .close_button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    font-weight: 1000;
-    font-size: 24px;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: 1000;
+  font-size: 24px;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
 }
+ @media (max-width: 768px) {
+
+  .picture_grid {
+    width: 100%;
+  }
+  .picture_item {
+    width: 60%;
+    height: auto;
+  }
+ }

@@ -31,6 +31,7 @@ function LoginPage() {
             );
 
             formRef.current.reset();
+            
             navigate("/profile");
         } catch (error) {
             console.error("Erreur de connexion:", error);
