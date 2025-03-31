@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  my-social-network:
+    container_name: my-social-network
+    image: assimelvin/my-social-network
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  nginx:
+    container_name: nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - my-social-network

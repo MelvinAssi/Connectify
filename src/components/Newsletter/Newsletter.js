@@ -1,16 +1,33 @@
-import React from "react";
+import React, {  useRef } from "react";
 import "./Newsletter.css"
 
 
+
 function Newsletter(){
+    const inputs = useRef([]);
+        const formRef = useRef();
+        const addInputs = (el) => {
+            if (el && !inputs.current.includes(el)) {
+                inputs.current.push(el);
+            }
+        };
+    
+        const handleForm = async (e) => {
+            e.preventDefault();
+            const string =  inputs.current[0].value + "\n" ;
+            formRef.current.reset();
+            alert(string+" Vous êts maintenant abonné à notre Newletters");
+    
+        };
     return(
         <>
             <div className="newsletter_container">
                 <h1>Newsletter</h1>
                 <p>Inscrivez-vous à notre newsletter pour rester informé(e) et connecté(e) avec Connectify !</p>
-                <form id="newsletter_form">
+                <form id="newsletter_form" ref={formRef} onSubmit={handleForm}>
                     <div>
                         <input
+                        ref={addInputs}
                         type="email"
                         id="email"
                         name="email"

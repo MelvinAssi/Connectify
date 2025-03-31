@@ -36,12 +36,9 @@ function Video() {
       path: file.name,
     };
 
-    setVideos((prevVideos) => {
-      const updatedVideos = [...prevVideos, newVideo];
-      // Mise à jour de l'état utilisateur avec la dernière vidéo
-      setUserData(currentUser.uid, "videos", updatedVideos.map(video => ({ name: video.name, path: video.path })));
-      return updatedVideos;
-    });
+    setVideos((prevVideos) => [...prevVideos, newVideo]);
+    setUserData(currentUser.uid, "videos",[...videos,{ name: fileName, path: file.name }])
+    
   };
 
   const handleAddVideo = (e) => {
@@ -56,14 +53,9 @@ function Video() {
         name: file.name,
       };
 
-      // Mise à jour des données utilisateur
-      setUserData(currentUser.uid, "videos", [newVideo]);  // Vous pouvez gérer les vidéos comme tableau ou un seul objet selon vos besoins
-
-      setVideos((prevVideos) => {
-        const updatedVideos = [...prevVideos, newVideo];
-        setUserData(currentUser.uid, "videos", updatedVideos.map((video) => ({ name: video.name, path: video.path })));
-        return updatedVideos;
-      });
+      
+      setUserData(currentUser.uid, "videos", userVideo); 
+      setVideos((prevVideos) => [...prevVideos, newVideo]);
     } else {
       alert("Veuillez sélectionner un fichier vidéo valide !");
     }
